@@ -1,0 +1,26 @@
+.slider {
+  position: relative;
+  &--hero {
+    width: 100vw;
+  }
+  &--new-arrivals,
+  &--our-partners {
+    width: 300px;
+    @include media("tablet") {
+      width: 704px;
+    }
+  }
+  &--new-arrivals {
+    @include media("desktop") {
+      width: 1120px;
+    }
+  }
+  &--our-partners {
+    align-items: center;
+    gap: 20px;
+    padding: 0 25px;
+    @include media("desktop") {
+      width: 1000px;
+    }
+  }
+}

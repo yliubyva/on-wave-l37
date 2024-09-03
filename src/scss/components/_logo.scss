@@ -1,0 +1,16 @@
+.logo {
+  width: 100px;
+  &--white {
+    width: 150px;
+  }
+  @include media("tablet") {
+    width: 168px;
+  }
+  @include media("desktop") {
+    width: 182px;
+  }
+  &--partners {
+    width: 114px;
+    height: auto;
+  }
+}

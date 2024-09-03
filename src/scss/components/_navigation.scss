@@ -1,0 +1,68 @@
+.navigation {
+  &__list {
+    @include flex(column, nowrap, flex-start, center);
+    &--header {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      background: $color-brown-light;
+      width: 100vw;
+      height: 400px;
+      z-index: 100;
+      @include media("tablet") {
+        @include flex(row, nowrap, flex-start, center);
+        padding-top: 0;
+        position: static;
+        top: 0;
+        width: 351px;
+        height: 0;
+      }
+    }
+    &--footer {
+      width: 73px;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  &__link {
+    @include text(16px, 500, $color-black, 20px);
+    @include media("desktop") {
+      @include text(20px, 500, $color-black, 24.4px);
+    }
+    &--header {
+      display: block;
+      padding: 20px 15px;
+      @include media("desktop") {
+        padding: 28px 15px;
+      }
+      &:hover {
+        width: 250px;
+        text-align: center;
+        color: white;
+        transition: color 0.3s;
+        background: $color-tomato-light;
+        transition: background-color 0.3s;
+        @include media("tablet") {
+          width: auto;
+        }
+      }
+    }
+    &--footer {
+      color: $color-brown-light;
+      &:hover {
+        color: $color-tomato-light;
+      }
+    }
+  }
+}
+
+#nav-menu {
+  display: none;
+  @include media("tablet") {
+    display: block;
+  }
+}
+
+#nav-menu.show {
+  display: block;
+}

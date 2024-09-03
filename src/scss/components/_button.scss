@@ -1,0 +1,22 @@
+.button {
+  background: none;
+  border: 2px solid $color-brown-light;
+  @include text(16px, 400, $color-brown-light, 20px);
+  text-transform: uppercase;
+  padding: 10px 26.5px;
+  user-select: none;
+  &:hover {
+    background: $color-tomato-light;
+    border-color: $color-tomato-light;
+    color: $color-brown-light;
+  }
+  &--black {
+    color: $color-black;
+    border-color: $color-black;
+  }
+  @include media("desktop") {
+    padding: 15px 57px;
+    font-size: 18px;
+    line-height: 1.375rem;
+  }
+}

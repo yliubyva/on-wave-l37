@@ -1,0 +1,67 @@
+.footer {
+  background: $color-brown-dark;
+  padding: 50px 0 30px;
+  &__container {
+    @extend .container;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr;
+    @include media("tablet") {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+    }
+    @include media("desktop") {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr 2fr;
+    }
+  }
+  &__logo {
+    grid-column: 1 / 3;
+    justify-self: center;
+    @include media("tablet") {
+      grid-column: 1 / 2;
+      justify-self: start;
+    }
+  }
+  &__navigation {
+    @include media("desktop") {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  }
+  &__list {
+    @include flex();
+    gap: 20px;
+    margin: 25px 0;
+    @include media("tablet") {
+      margin: 26px 0 20px;
+    }
+    @include media("desktop") {
+      margin: 48px 0 32px;
+    }
+  }
+  &__contact {
+    @include flex(column, nowrap, flex-start, flex-end);
+    @include media("tablet") {
+      align-items: flex-start;
+    }
+    @include media("desktop") {
+      grid-row: -1 / -3;
+      justify-self: end;
+    }
+  }
+  &__title,
+  &__number {
+    @include text(20px, 500, $color-brown-light, 20px);
+    @include media("desktop") {
+      font-size: 26px;
+      line-height: 2rem;
+    }
+  }
+  &__copyright {
+    @include text(12px, 500, $color-brown-light, 15px);
+    display: block;
+    text-align: center;
+  }
+}

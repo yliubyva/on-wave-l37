@@ -1,0 +1,33 @@
+.card {
+  @include flex(column, nowrap, space-between, center);
+  gap: 10px;
+  border: 1px solid $color-brown-light;
+  padding: 20px 10px 10px;
+  height: 491px;
+  @include media("tablet") {
+    height: 437px;
+  }
+  &__image {
+    height: 370px;
+  }
+  &__status {
+    @include text(10px, 500, $color-brown-light, 12px);
+    text-transform: uppercase;
+    background: $color-tomato-light;
+    padding: 4px 5.5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &--sold {
+      color: $color-black;
+      background: $color-brown-light;
+    }
+  }
+  &__title {
+    @include text(16px, 600, $color-black, 19.5px);
+    text-align: center;
+  }
+  &__price {
+    @include text(24px, 700, $color-black, 29.3px);
+  }
+}
