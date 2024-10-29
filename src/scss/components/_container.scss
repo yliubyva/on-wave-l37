@@ -1,0 +1,9 @@
+.container {
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 10px;
+  @include media("tablet") {
+    max-width: 1120px;
+    padding: 15px;
+  }
+}

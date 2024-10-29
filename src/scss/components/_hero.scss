@@ -1,0 +1,15 @@
+.hero {
+  &__container {
+    width: 100%;
+  }
+  &__title {
+    @include text(26px, 700, $color-brown-light, 32px);
+    text-transform: uppercase;
+    width: 210px;
+    text-align: center;
+    @include media("desktop") {
+      @include text(50px, 700, $color-brown-light, 61px);
+      width: 400px;
+    }
+  }
+}

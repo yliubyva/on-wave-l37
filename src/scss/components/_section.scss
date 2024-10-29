@@ -1,0 +1,26 @@
+.section {
+  margin-top: 50px;
+  &__container {
+    @extend .container;
+    @include flex(column, nowrap, flex-start, center);
+    gap: 40px;
+    &--new-arrivals,
+    &--our-partners {
+        position: relative;
+    }
+    &--our-partners {
+      padding: 50px 0;
+      gap: 50px;
+    }
+  }
+  &__title {
+    @include text(20px, 700, $color-black, 24.4px);
+    text-transform: uppercase;
+    @include media("desktop") {
+      font-size: 32px;
+    }
+  }
+  &--our-partners {
+    background: $color-brown-light;
+  }
+}

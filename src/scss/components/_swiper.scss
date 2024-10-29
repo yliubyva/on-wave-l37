@@ -1,0 +1,57 @@
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border: none;
+  background: $color-dot-inactive;
+  border-radius: 50%;
+}
+.swiper-pagination-2,
+.swiper-pagination-3 {
+    position: static;
+    margin-top: 20px;
+    display: block;
+    @include media("tablet") {
+        display: none;
+    }
+}
+.swiper-pagination-2 > .swiper-pagination-bullet,
+.swiper-pagination-3 > .swiper-pagination-bullet {
+    background: $color-dark-dot-inactive;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active,
+.swiper-pagination-2 .swiper-pagination-bullet-active,
+.swiper-pagination-3 .swiper-pagination-bullet-active {
+  background-color: $color-tomato-light;
+  transition: background-color 0.3s;
+}
+.swiper-slide-active > .card {
+    border-color: $color-tomato-light;
+}
+.swiper-button-prev-2,
+.swiper-button-next-2,
+.swiper-button-prev-3,
+.swiper-button-next-3 {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+.swiper-button-prev-2,
+.swiper-button-prev-3 {
+
+    @include media("tablet"){
+        left: 10px;
+    }
+    @include media("desktop"){
+        left: -40px;
+    }
+}
+.swiper-button-next-2,
+.swiper-button-next-3 {
+    @include media("tablet"){
+        right: 20px;
+    }
+    @include media("desktop"){
+        right: -50px;
+    }
+}

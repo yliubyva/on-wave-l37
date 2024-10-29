@@ -1,0 +1,47 @@
+.burger {
+  display: block;
+  width: 22px;
+  height: 20px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  @include media("tablet") {
+    display: none;
+  }
+  &__line {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $color-black;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    &--top {
+      top: 0px;
+    }
+    &--center {
+      top: 9px;
+    }
+    &--bottom {
+      top: 18px;
+    }
+  }
+}
+
+.burger.open .burger__line--top {
+  top: 9px;
+  transform: rotate(135deg);
+}
+
+.burger.open .burger__line--center {
+  opacity: 0;
+  left: -30px;
+}
+
+.burger.open .burger__line--bottom {
+  top: 9px;
+  transform: rotate(-135deg);
+}

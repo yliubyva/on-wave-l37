@@ -9,6 +9,15 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: $font-main;
+}
+
 button,
 a {
   cursor: pointer;
@@ -32,4 +41,12 @@ textarea {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.seo-pagetitle {
+  position: absolute;
+  clip-path: rect(1px 1px 1px 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }

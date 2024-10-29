@@ -1,0 +1,11 @@
+.header {
+  background: $color-brown-light;
+  &__container {
+    @extend .container;
+    @include flex(row, nowrap, space-between, center);
+    height: 60px;
+    @include media("desktop") {
+      height: 80px;
+    }
+  }
+}

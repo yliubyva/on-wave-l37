@@ -1,0 +1,61 @@
+.slide { 
+  &--gradient {
+    position: absolute;
+    top: 0;
+    height: 384px;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.84) 0%,
+      rgba(217, 217, 217, 0) 100%
+    );
+  }
+  &__content {
+    margin-top: 60px;
+    @include flex(column, nowrap, flex-start, center);
+    gap: 21px;
+    position: relative;
+    left: 15%;
+    z-index: 3;
+    @include media("tablet") {
+      margin-top: 120px;
+      left: 30%;
+    }
+    @include media("desktop") {
+      gap: 50px;
+    }
+  }
+  &--first {
+    background-image: url(/assets/hero-image-1.png);
+  }
+  &--second {
+    background-image: url(/assets/hero-image-2.png);
+  }
+  &--third {
+    background-image: url(/assets/hero-image-3.png);
+  }
+  &--first,
+  &--second,
+  &--third {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25%;
+    height: 384px;
+    @include media("desktop") {
+        height: 700px;
+    }
+  }
+  &__card,
+  &--new-arrivals {
+    width: 300px;
+    @include media("tablet"){
+        width: 220px;
+        gap: 20px;
+    }
+  }
+  &--our-partners {
+    height: auto;
+    width: auto;
+  }
+}
